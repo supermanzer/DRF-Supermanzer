@@ -1,0 +1,15 @@
+
+# Pipenv stuff
+.Pipfile/
+
+# ENVIRONMENT VARIABLES
+.env 
+
+# IDE Stuff
+.vscode
+
+# Compllied code
+__pycache__/
+
+# Local DB
+db.sqlite3
