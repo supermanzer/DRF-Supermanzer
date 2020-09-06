@@ -8,6 +8,7 @@ from supermanzer import views
 router = DefaultRouter()
 # Register endpoits with it
 router.register(r'projects', views.ProjectViewSet)
+router.register(r'about', views.AboutViewset)
 
 # Inlcude router's auto-generated URLs in the urlpatterns
 urlpatterns = [

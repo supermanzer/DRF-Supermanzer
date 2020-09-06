@@ -10,9 +10,11 @@ services:
       - .:/src/app
     ports:
       - "8000:8000"
-    command: python manage.py runserver 0.0.0.0:8000
+    command: ./start_server.sh
     env_file:
       - .env
+    depends_on:
+      - db
 
   db:
     restart: always
