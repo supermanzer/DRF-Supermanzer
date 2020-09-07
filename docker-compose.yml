@@ -8,8 +8,6 @@ services:
       dockerfile: api_Dockerfile
     volumes:
       - .:/src/app
-    ports:
-      - "8000:8000"
     command: ./start_server.sh
     env_file:
       - .env
@@ -25,6 +23,14 @@ services:
       - .env
     ports:
       - "5433:5432"
+
+  nginx:
+    restart: always
+    image: nginx:latest
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/nginx.conf
+    ports:
+      - "8123:80"
 
 volumes:
   pg-data: {}
