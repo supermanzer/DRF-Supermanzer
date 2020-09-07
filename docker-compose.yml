@@ -29,8 +29,11 @@ services:
     image: nginx:latest
     volumes:
       - ./nginx/default.conf:/etc/nginx/nginx.conf
+      - ./static:/home/static
     ports:
       - "8123:80"
+    depends_on:
+      - api
 
 volumes:
   pg-data: {}
