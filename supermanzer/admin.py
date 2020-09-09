@@ -26,3 +26,4 @@ class ProjectAdmin(admin.ModelAdmin):
 @admin.register(AboutSection)
 class AboutAdmin(admin.ModelAdmin):
     list_display = ('heading', 'component_element', 'component_position')
+    inlines = [ComponentInline, ]

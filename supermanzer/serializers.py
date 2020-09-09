@@ -10,7 +10,7 @@ from .models import AboutComponent, AboutSection, Project, ProjectSection
 class SectionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProjectSection
-        fields = ['id', 'class_string', 'is_markdown', 'text']
+        fields = ['id', 'class_string', 'heading', 'is_markdown', 'text']
 
 
 class ProjectSerializer(serializers.ModelSerializer):
